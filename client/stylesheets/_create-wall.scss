@@ -1,16 +1,35 @@
 #create-wall-form {
 	padding:0;
 	margin:0;
-	
+	height:100%;
 	position:fixed;
 	right:0;
 	bottom:0;
-	@include span-columns(8);
+	@include span-columns(10);
 	background-color:black;
 	opacity:.8;
 	z-index:20;
-	height:30em;
 	display:none;
+	input {
+		display:block;
+		@include span-columns(6);
+		padding:.7em;
+		margin:.7em;
+		border-radius: 6px;
+		border:none;
+		height:5em;
+	}
+
+	#artist-name-field{
+	}
+	#photographers-name-field{
+	}
+	#location-name-field{
+	}
+	#image-name{
+	}
+	#submit-button{
+	}
 
 }
 #create-wall-form-backer {

@@ -22,10 +22,16 @@ if (Meteor.isClient) {
     'click #art-wall-backer': function () {
       document.getElementById('muro-welcome').style.display="none"
       document.getElementById('art-wall-backer').style.display="none"
-      document.getElementById('art-wall').style.display="none"
-      
-      
+      document.getElementById('art-wall').style.display="none"  
+    },
+    'click #add-btn': function () {
+      document.getElementById('muro-welcome').style.display="none"
+      document.getElementById('art-wall-backer').style.display="none"
+      document.getElementById('art-wall').style.display="none"  
+      document.getElementById('create-wall-form').style.display="block"
+      document.getElementById('create-wall-form-backer').style.display="block"
     }
+
   });
 }
 
