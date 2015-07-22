@@ -1,0 +1,75 @@
+#art-wall {
+	padding:0;
+	margin:0;
+	position:fixed;
+	right:0;
+	bottom:0;
+	@include span-columns(10);
+	background-color:black;
+	opacity:.8;
+	z-index:20;
+	height:100%;
+	display:none;
+	color:white;
+
+	#back-btn{
+		@include span-columns(2);
+		background-color:white;
+
+	}
+	#add-btn{
+		@include span-columns(2);
+		background-color:white;
+		position:fixed;
+		right:0;
+
+	}
+	#artist-name{
+		@include span-columns(6);
+		@include shift(2);
+	}
+	#location-name{
+		@include outer-container;
+		@include span-columns(12);
+		text-align:center;
+
+	}
+	.main-photo{
+
+		background-color:white;
+		height:5em;
+		position:relative;
+		width:10em;
+		text-align:center;
+		margin-left:auto;
+		margin-right:auto;
+		top:auto
+	}
+	#photo-cred{
+
+	}
+	.description{
+
+	}
+	.wall-history{
+		@include outer-container;
+		@include span-columns(12);
+		.thumbnail-img{
+
+		}
+	}
+
+}
+#art-wall-backer {
+	padding:0;
+	margin:0;
+	position:fixed;
+	right:0;
+	bottom:0;
+	@include span-columns(12);
+	background-color:black;
+	opacity:.8;
+	z-index:19;
+	height:100%;
+	display:none;
+} 

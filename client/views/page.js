@@ -18,6 +18,13 @@ if (Meteor.isClient) {
       document.getElementById('create-wall-form-backer').style.display="none"
       
       
+    },
+    'click #art-wall-backer': function () {
+      document.getElementById('muro-welcome').style.display="none"
+      document.getElementById('art-wall-backer').style.display="none"
+      document.getElementById('art-wall').style.display="none"
+      
+      
     }
   });
 }

@@ -120,6 +120,10 @@
 
 
 if (Meteor.isClient) {
+  Meteor.startup(function() {
+    GoogleMaps.load();
+  });
+
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
@@ -130,29 +134,26 @@ if (Meteor.isClient) {
       var markers = {};
 
       Markers.find().observe({
-        added: function (document) {
 
-        	// document.getElementById('create-wall-form').style.display="block"
-
+        added: function (thing) {
           var marker = new google.maps.Marker({
             draggable: true,
             animation: google.maps.Animation.DROP,
-            position: new google.maps.LatLng(document.lat, document.lng),
+            position: new google.maps.LatLng(thing.lat, thing.lng),
             map: map.instance,
-            id: document._id
+            id: thing._id
           });
-  				google.maps.event.addListener(marker, 'click', function() {
-  					//click this marker to show this wall please
+          function showArtWall() {
+          	console.log("boop")
+          	document.getElementById('art-wall').style.display="block"
+          	document.getElementById('art-wall-backer').style.display="block"
+          }
+          
+          google.maps.event.addListener(marker, 'click', function() {
   					console.log("this muther marker art wall")
-  					function showArtWall() {
-  						console.log("artwall")
-  					}
   					showArtWall()
-  					// document.getElementById('create-wall-form').style.display="block"
-  					// console.log(marker)
-  					// console.log(marker.id)
-  					// console.log(this)
   				});
+
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
             Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
@@ -169,6 +170,8 @@ if (Meteor.isClient) {
           	document.getElementById('create-wall-form-backer').style.display="block"
           }
           showCreateForm();
+           
+
 
         }, 
         removed: function (oldDocument) {
@@ -181,9 +184,6 @@ if (Meteor.isClient) {
     });
   });
 
-  Meteor.startup(function() {
-    GoogleMaps.load();
-  });
 
   Template.map.helpers({
     mapOptions: function() {
