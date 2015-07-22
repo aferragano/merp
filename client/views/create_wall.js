@@ -1,40 +1,36 @@
-///////////////////////////////////////////////////////////////////////////////
-// Create Party dialog
+if (Meteor.isClient) {
 
-// Template.createDialog.events({
-//   'click .save': function (event, template) {
-//     var title = template.find(".title").value;
-//     var description = template.find(".description").value;
-//     var public = ! template.find(".private").checked;
-//     var latlng = Session.get("createCoords");
 
-//     if (title.length && description.length) {
-//       Meteor.call('createParty', {
-//         title: title,
-//         description: description,
-//         latlng: latlng,
-//         public: public
-//       }, function (error, party) {
-//         if (! error) {
-//           Session.set("selected", party);
-//           if (! public && Meteor.users.find().count() > 1)
-//             Session.set("showInviteDialog", true);
-//         }
-//       });
-//       Session.set("showCreateDialog", false);
-//     } else {
-//       Session.set("createError",
-//                   "It needs a title and a description, or why bother?");
-//     }
-//   },
+  Template.body.helpers({
+    // "submit .add-to-art-wall": function (event){
+    // 	// event.preventDefault();
 
-//   'click .cancel': function () {
-//     Session.set("showCreateDialog", false);
-//   }
-// });
+    // 	var locationName = event.target.text.value
+    // 	console.log("locationName")
+    // }
+  });
 
-// Template.createDialog.helpers({
-//   error: function () {
-//     return Session.get("createError");
-//   }
-// });
+  Template.body.events({
+  	"submit form": function (event){
+    	event.preventDefault();
+    	// console.log(form)
+
+    	var locationName = event.target.locationName.value;
+    	var photographerName = event.target.photographerName.value;
+    	var artistName = event.target.artistName.value;
+    	var imageName = event.target.imageName.value;
+
+    	console.log("locationName")
+    	console.log(locationName)
+    	console.log("photographerName")
+    	console.log(photographerName)
+    	console.log("artistName")
+    	console.log(artistName)
+    	console.log("imageName")
+    	console.log(imageName)
+
+    }
+
+  });
+}
+

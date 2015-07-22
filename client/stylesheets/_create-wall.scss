@@ -12,7 +12,7 @@
 	display:none;
 	input {
 		display:block;
-		@include span-columns(6);
+		@include span-columns(7);
 		padding:.7em;
 		margin:.7em;
 		border-radius: 6px;
@@ -28,7 +28,15 @@
 	}
 	#image-name{
 	}
-	#submit-button{
+	#submit{
+		display:block;
+		background-color:white;
+		@include span-columns(4);
+		padding:.4em;
+		margin:.4em;
+		border-radius: 6px;
+		border:none;
+		height:5em;
 	}
 
 }

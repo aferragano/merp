@@ -30,12 +30,14 @@
   </div>
 </template> -->
 <template name="create_wall">
-  <div id="create-wall-form">
-    <input id="artist-name-field"  placeholder="Artist-Name"/>
-    <input id="photographers-name-field" placeholder="Photgrapher-Name"/>
-    <input id="image-name" placeholder="image-Name"/>
-    <input id="location-name-field" placeholder="Location-Name"/>
-    <p id="submit-btn">submit</p>
-  </div>
+  <form class="add-to-art-wall">
+    <div id="create-wall-form">
+      <input id="artist-name-field" name="artistName" type="text" placeholder="Artist-Name"/>
+      <input id="photographers-name-field" name="photographerName" type="text" placeholder="Photgrapher-Name"/>
+      <input id="image-name" name="imageName" type="text" placeholder="image-Name"/>
+      <input id="location-name-field" name="locationName" type="text" placeholder="Location-Name"/>
+      <input id="submit" type="submit">
+    </div>
+  </form>
   <div id="create-wall-form-backer"></div>
 </template>
