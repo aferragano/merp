@@ -170,7 +170,7 @@ if (Meteor.isClient) {
           }
           showCreateForm();
 
-        },
+        }, 
         removed: function (oldDocument) {
           markers[oldDocument._id].setMap(null);
           google.maps.event.clearInstanceListeners(markers[oldDocument._id]);
