@@ -1,0 +1,70 @@
+@import "bourbon/bourbon";
+@import "grid-settings";
+@import "neat/neat";
+@import "map";
+@import "create-wall";
+
+#muro-welcome {
+	background-color: #00A0B0;
+	padding: 1em;
+	text-align: center;
+	position: fixed;
+	z-index: 10;
+	opacity: .8;
+	top: 5em;
+	color:white;
+	@include span-columns(6);
+	@include shift(3);
+}
+
+#map-btn {
+	background-color: #00A0B0;
+	padding: 1em;
+	text-align: center;
+	position: fixed;
+	z-index: 10;
+	opacity: .8;
+	bottom:30px;
+	color:white;
+	@include span-columns(4);
+	@include shift(4);
+}
+
+#map-tools{
+	display:none;
+
+	#create-wall-prompt{
+		background-color: #00A0B0;
+		z-index: 10;
+		color:white;
+		text-align: center;
+		position: fixed;
+		padding:1em;
+		bottom:5em;
+		right:0em;
+		@include span-columns(4);
+	}
+	#search-map-btn{
+		background-color: #00A0B0;
+		z-index: 10;
+		color:white;
+		text-align: center;
+		position: fixed;
+		padding:1em;
+		bottom:20em;
+		@include span-columns(3);
+	}
+	#find-my-location{
+		background-color: #00A0B0;
+		z-index: 10;
+		color:white;
+		text-align: center;
+		position: fixed;
+		padding:1em;
+		bottom:5em;
+		@include span-columns(3);
+
+	}
+
+}
+

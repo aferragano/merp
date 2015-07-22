@@ -1,0 +1,28 @@
+#create-wall-form {
+	padding:0;
+	margin:0;
+	
+	position:fixed;
+	right:0;
+	bottom:0;
+	@include span-columns(8);
+	background-color:black;
+	opacity:.8;
+	z-index:20;
+	height:30em;
+	display:none;
+
+}
+#create-wall-form-backer {
+	padding:0;
+	margin:0;
+	position:fixed;
+	right:0;
+	bottom:0;
+	@include span-columns(12);
+	background-color:black;
+	opacity:.8;
+	z-index:19;
+	height:100%;
+	display:none;
+} 
