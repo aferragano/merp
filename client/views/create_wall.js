@@ -30,10 +30,10 @@ if (Meteor.isClient) {
     	var imageName = event.target.imageName.value;
 
     	Markers.update( marker_id, {
-    		$set: { 	graph: {locationName: event.target.locationName.value,
+    		$addToSet: { 	graph: [ {locationName: event.target.locationName.value,
     		    		    							photographerName: event.target.photographerName.value,
     		    		    							artistName: event.target.artistName.value,
-    		    		    							date: "date"} }
+    		    		    							date: "date"}] }
     	});
     	var marker = Markers.find( { "_id": marker_id }).fetch()
     	console.log("lalalalalallalalalalalalallalal")
