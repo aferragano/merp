@@ -152,6 +152,10 @@ if (Meteor.isClient) {
           
           google.maps.event.addListener(marker, 'click', function() {
   					console.log("this muther marker art wall")
+  					console.log(this)
+  					console.log(this.id)
+  					sessionStorage.setItem("marker.id", this.id);
+            console.log(sessionStorage)
   					showArtWall()
   				});
 
@@ -161,7 +165,7 @@ if (Meteor.isClient) {
             console.log("!!!!!!!!!!!!!!!!!!!!!!!!marker.id")
             console.log(marker.id)
             console.log("!!!!!!!!!!!!!!!!!!!!!!!!marker.id")
-            Session.set("Lat", "is-editing");
+            // Session.set("Lat", "is-editing");
             sessionStorage.setItem("marker.id", marker.id);
             console.log(sessionStorage)
           });
