@@ -22,5 +22,7 @@ if (Meteor.isServer) {
     // Session.set("lat", localStorage.getItem("lat22"));
     // Session.set("len", localStorage.getItem("len"));
     // console.log(Session.get('lat'))
+    // console.log("JESUUSSSSS")
+    
   });
 }

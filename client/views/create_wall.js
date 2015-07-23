@@ -16,13 +16,13 @@ if (Meteor.isClient) {
     	// console.log(form)
     	
 
-    	
+    	//pull last selected marker/wall to edit add 
     	var marker_id = sessionStorage.getItem("marker.id");
     	var marker = Markers.find( { "_id": marker_id }).fetch()
-    	console.log("DEEEEE MARKER IS");
-    	console.log(marker_id)
-    	console.log("DEEEEE obj MARKER IS");
-    	console.log(marker)
+    	// console.log("DEEEEE MARKER IS");
+    	// console.log(marker_id)
+    	// console.log("DEEEEE obj MARKER IS");
+    	// console.log(marker)
 
     	var locationName = event.target.locationName.value;
     	var photographerName = event.target.photographerName.value;
@@ -33,21 +33,22 @@ if (Meteor.isClient) {
     		$addToSet: { 	graph: [ {locationName: event.target.locationName.value,
     		    		    							photographerName: event.target.photographerName.value,
     		    		    							artistName: event.target.artistName.value,
-    		    		    							date: "date"}] }
+    		    		    							date: new Date()}] }
     	});
-    	var marker = Markers.find( { "_id": marker_id }).fetch()
-    	console.log("lalalalalallalalalalalalallalal")
-    	console.log(marker)
-    	
+    	Cloudinary.upload( function(){
+    		console.log("Frake")
+    	})
 
-    	// console.log("locationName")
-    	// console.log(locationName)
-    	// console.log("photographerName")
-    	// console.log(photographerName)
-    	// console.log("artistName")
-    	// console.log(artistName)
-    	// console.log("imageName")
-    	// console.log(imageName)
+    	var marker = Markers.find( { "_id": marker_id }).fetch()
+    	// console.log("lalalalalallalalalalalalallalal")
+    	// console.log(marker)
+    	// //
+    	// console.log("RESET")
+    	//clear out data form
+    	$("#photographers-name-field").val("");
+    	$("#artist-name-field").val("");
+    	$("#image-name").val("");
+    	$("#location-name-field").val("");
 
     }
 
