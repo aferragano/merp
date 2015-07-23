@@ -19,5 +19,8 @@ if (Meteor.isClient) {
 if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
+    // Session.set("lat", localStorage.getItem("lat22"));
+    // Session.set("len", localStorage.getItem("len"));
+    // console.log(Session.get('lat'))
   });
 }

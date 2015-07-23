@@ -143,6 +143,7 @@ if (Meteor.isClient) {
             map: map.instance,
             id: thing._id
           });
+
           function showArtWall() {
           	console.log("boop")
           	document.getElementById('art-wall').style.display="block"
@@ -157,22 +158,25 @@ if (Meteor.isClient) {
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
             Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!marker.id")
+            console.log(marker.id)
+            console.log("!!!!!!!!!!!!!!!!!!!!!!!!marker.id")
+            Session.set("Lat", "is-editing");
+            sessionStorage.setItem("marker.id", marker.id);
+            console.log(sessionStorage)
           });
 
           markers[document._id] = marker;
         },
         changed: function (newDocument, oldDocument) {
           markers[newDocument._id].setPosition({ lat: newDocument.lat, lng: newDocument.lng });
-          console.log(this);
+          // console.log(this);
           function showCreateForm() {
           	console.log("boop")
           	document.getElementById('create-wall-form').style.display="block"
           	document.getElementById('create-wall-form-backer').style.display="block"
           }
           showCreateForm();
-           
-
-
         }, 
         removed: function (oldDocument) {
           markers[oldDocument._id].setMap(null);
