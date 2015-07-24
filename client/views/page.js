@@ -1,5 +1,13 @@
 if (Meteor.isClient) {
 
+  Router.route('/', function () {
+    this.render('Post', {
+      data: function () {
+        return Posts.findOne({_id: this.params._id});
+      }
+    });
+  });
+
 
   Template.page.helpers({
 
