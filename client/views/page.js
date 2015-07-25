@@ -1,11 +1,23 @@
 if (Meteor.isClient) {
 
   Router.route('/', function () {
-    this.render('Post', {
-      data: function () {
-        return Posts.findOne({_id: this.params._id});
-      }
-    });
+    // this.render('art_wall', {
+    //   data: function () {
+    //     bob=  Markers.findOne({});
+    //     // bob: [
+    //     // "jesus"]
+    //      console.log("bob")
+    //     console.log(bob)
+    //     console.log(bob.graph)
+    //     // console.log(bob.lat)
+    //     console.log("bob")
+    //   }
+    // });
+    // data: function () { return Posts.findOne({_id: this.params._id}) },
+
+    // yieldRegions: {
+    //   'bob': {to: 'bob'}
+    // },
   });
 
 

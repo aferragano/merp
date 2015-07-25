@@ -102,7 +102,7 @@
 
 // var createIcon = function(wall) {
 //   var className = 'leaflet-div-icon ';
-//   console.log("create")
+  console.log("create")
 //   // className += wall.public ? 'public' : 'private';
 //   return L.divIcon({
 //     iconSize: [30, 30],
@@ -112,7 +112,7 @@
 // }
 
 // var openCreateDialog = function (latlng) {
-// 	console.log("thing")
+	console.log("thing")
 //   Session.set("createCoords", latlng);
 //   Session.set("createError", null);
 //   Session.set("showCreateDialog", true);
@@ -134,6 +134,11 @@ if (Meteor.isClient) {
       var markers = {};
 
       Markers.find().observe({
+        // data: function() {
+        //   var anthony = "blahhhhhhhhh"
+        //   return anthony
+        // },
+        
 
         added: function (thing) {
           var marker = new google.maps.Marker({
@@ -143,40 +148,47 @@ if (Meteor.isClient) {
             map: map.instance,
             id: thing._id
           });
+          function loadArt() {
+            document.getElementById("artist-name")
+          }
 
           function showArtWall() {
-          	console.log("boop")
+          	// console.log("boop")
           	document.getElementById('art-wall').style.display="block"
           	document.getElementById('art-wall-backer').style.display="block"
+            loadArt()
+
           }
           
           google.maps.event.addListener(marker, 'click', function() {
-  					console.log("this muther marker art wall")
-  					console.log(this)
-  					console.log(this.id)
+  					// console.log("this muther marker art wall")
+  					// console.log(this)
+  					// console.log(this.id)
   					sessionStorage.setItem("marker.id", this.id);
-            console.log(sessionStorage)
+            // console.log(sessionStorage)
+            
   					showArtWall()
+
   				});
 
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
             Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!marker.id")
-            console.log(marker.id)
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!marker.id")
+            // console.log("!!!!!!!!!!!!!!!!!!!!!!!!marker.id")
+            // console.log(marker.id)
+            // console.log("!!!!!!!!!!!!!!!!!!!!!!!!marker.id")
             // Session.set("Lat", "is-editing");
             sessionStorage.setItem("marker.id", marker.id);
-            console.log(sessionStorage)
+            // console.log(sessionStorage)
           });
 
           markers[document._id] = marker;
         },
         changed: function (newDocument, oldDocument) {
           markers[newDocument._id].setPosition({ lat: newDocument.lat, lng: newDocument.lng });
-          // console.log(this);
+          console.log(this);
           function showCreateForm() {
-          	console.log("boop")
+          	// console.log("boop")
           	document.getElementById('create-wall-form').style.display="block"
           	document.getElementById('create-wall-form-backer').style.display="block"
           }

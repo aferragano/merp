@@ -35,9 +35,9 @@ if (Meteor.isClient) {
     		    		    							artistName: event.target.artistName.value,
     		    		    							date: new Date()}] }
     	});
-    	Cloudinary.upload( function(){
-    		console.log("Frake")
-    	})
+    	// Cloudinary.upload( function(){
+    	// 	console.log("Frake")
+    	// })
 
     	var marker = Markers.find( { "_id": marker_id }).fetch()
     	// console.log("lalalalalallalalalalalalallalal")
