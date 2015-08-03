@@ -5,13 +5,20 @@
 @import "create-wall";
 @import "art_wall";
 
+body,html {
+	margin:0;
+	padding:0;
+	font-family: 'Montserrat', sans-serif;
+}
+
 #muro-welcome {
 	background-color: #00A0B0;
+	border-radius:6px;
 	padding: 1em;
 	text-align: center;
 	position: fixed;
 	z-index: 10;
-	opacity: .8;
+	opacity: .9;
 	top: 5em;
 	color:white;
 	@include span-columns(6);
@@ -20,20 +27,25 @@
 
 #map-btn {
 	background-color: #00A0B0;
-	padding: 1em;
+	border-radius:10px;
+	padding-right:4px;
+	padding-left:4px;
 	text-align: center;
 	position: fixed;
 	z-index: 10;
-	opacity: .8;
+	opacity: .9;
 	bottom:30px;
 	color:white;
-	@include span-columns(4);
-	@include shift(4);
+	@include span-columns(2);
+	@include shift(5);
+	img {
+		@include span-columns(12);
+
+	}
 }
 
 #map-tools{
 	display:none;
-
 	#create-wall-prompt{
 		background-color: #00A0B0;
 		z-index: 10;
@@ -47,23 +59,30 @@
 	}
 	#search-map-btn{
 		background-color: #00A0B0;
+		border-radius:6px;
 		z-index: 10;
 		color:white;
 		text-align: center;
 		position: fixed;
-		padding:1em;
 		bottom:20em;
-		@include span-columns(3);
+		width:auto;
+		img{
+			height:70px;
+		}
+
 	}
 	#find-my-location{
 		background-color: #00A0B0;
+		border-radius:6px;
 		z-index: 10;
 		color:white;
 		text-align: center;
 		position: fixed;
-		padding:1em;
 		bottom:5em;
-		@include span-columns(3);
+		width:auto;
+		img{
+			height:70px;
+		}
 
 	}
 

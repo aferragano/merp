@@ -1,19 +1,55 @@
 <template name="art_wall">
   <div id="art-wall">
-  	<div id="back-btn"> back btn</div>
-  	<div id="add-btn"> add btn</div>
-  	<h1 id="artist-name">Artist Name</h1>
-  	<h3 id="location-name">location Name</h3>
+  	<div id="back-btn"> <img src="/images/icons_white_back_arrow.png"> </div>
+  	<div id="add-btn"> <img src="/images/icons_white_plus.png"></div>
+  	<h1 id="artist-name">{{artist_name}} </h1>
+  	<h3 id="location-name">{{locationName}} </h3>
 
   	<div class="main-photo">
-  	</div>
-  	<label id="photo-cred">photo-cred: photographer</label>
+      <img class="main-photo" src="http://zipgunforlife.com/wp-content/uploads/2013/12/nekstjade-tribute-graffiti-piece-steel-seventh-letter-san-francisco-graffiti-art.jpg">
 
-  	<div class="description"> this is a description of the artist work and if it has any social context or meaning</div>
+  	</div>
+  	<label id="photo-cred">photo-cred:{{photographerName}} </label>
+
+  	<div class="description"> {{artDescription}} </div>
 
   	<ul class="wall-history">
-
-  		<li class="thumbnail-img"></li>
+  		<li class="thumbnail-img">
+        <img src="http://endlesscanvas.com/wp-content/uploads/2012/05/DEVOTEGraffiti-SanFranciscoCA.jpg">
+        <p>1994</p>
+      </li>
+      <li class="thumbnail-img">
+        <img src="http://endlesscanvas.com/wp-content/uploads/2012/05/DEVOTEGraffiti-SanFranciscoCA.jpg">
+        <p>1994</p>
+      </li>
+      <li class="thumbnail-img">
+        <img src="http://endlesscanvas.com/wp-content/uploads/2012/05/DEVOTEGraffiti-SanFranciscoCA.jpg">
+        <p>1994</p>
+      </li>
+      <li class="thumbnail-img">
+        <img src="http://endlesscanvas.com/wp-content/uploads/2012/05/DEVOTEGraffiti-SanFranciscoCA.jpg">
+        <p>1994</p>
+      </li>
+      <li class="thumbnail-img">
+        <img src="http://endlesscanvas.com/wp-content/uploads/2012/05/DEVOTEGraffiti-SanFranciscoCA.jpg">
+        <p>1994</p>
+      </li>
+      <li class="thumbnail-img">
+        <img src="http://endlesscanvas.com/wp-content/uploads/2012/05/DEVOTEGraffiti-SanFranciscoCA.jpg">
+        <p>1994</p>
+      </li>
+      <li class="thumbnail-img">
+        <img src="http://endlesscanvas.com/wp-content/uploads/2012/05/DEVOTEGraffiti-SanFranciscoCA.jpg">
+        <p>1994</p>
+      </li>
+      <li class="thumbnail-img">
+        <img src="http://endlesscanvas.com/wp-content/uploads/2012/05/DEVOTEGraffiti-SanFranciscoCA.jpg">
+        <p>1994</p>
+      </li>
+      <li class="thumbnail-img">
+        <img src="http://endlesscanvas.com/wp-content/uploads/2012/05/DEVOTEGraffiti-SanFranciscoCA.jpg">
+        <p>1994</p>
+      </li>
 
   	</ul>
 

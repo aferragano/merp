@@ -4,7 +4,7 @@
 	position:fixed;
 	right:0;
 	bottom:0;
-	@include span-columns(10);
+	@include span-columns(10 of 12);
 	background-color:black;
 	opacity:.8;
 	z-index:20;
@@ -14,51 +14,84 @@
 
 	#back-btn{
 		@include span-columns(2);
-		background-color:white;
+		img {
+			height:40px;
+		}
 
 	}
 	#add-btn{
-		@include span-columns(2);
-		background-color:white;
+		@include span-columns(1);
 		position:fixed;
 		right:0;
+		img {
+			height:40px;
+		}
 
 	}
 	#artist-name{
-		@include span-columns(6);
+		@include span-columns(6 of 10);
 		@include shift(2);
 	}
 	#location-name{
-		@include outer-container;
-		@include span-columns(12);
+		@include span-columns(6 of 10);
+		@include shift(2);
 		text-align:center;
 
 	}
 	.main-photo{
-
 		background-color:white;
-		height:5em;
 		position:relative;
-		width:10em;
 		text-align:center;
 		margin-left:auto;
 		margin-right:auto;
-		top:auto
-	}
-	#photo-cred{
-
-	}
-	.description{
-
-	}
-	.wall-history{
-		@include outer-container;
-		@include span-columns(12);
-		.thumbnail-img{
-
+		top:auto;
+		img {
+			@include span-columns(6 of 10);
+			@include shift(2);
+			height:auto;
 		}
 	}
+	#photo-cred{
+		@include span-columns(4 of 10);
+		@include shift(5);
+	}
+	.description{
+		margin-top:2em;
+		@include span-columns(8 of 10);
+		@include shift(1);
+		text-align:center;
+	}
+	.wall-history{
+		@include span-columns(10 of 10);
+		background-color:#8F9998;
+		height:12em;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+		
 
+		h2 {
+			@include span-columns(10 of 10);
+			display:block;
+		}
+
+		li.thumbnail-img{
+			display:inline-block;
+			list-style:none;
+			margin: .5em;
+			height:50px;
+			img{
+				margin: 1em;
+				height:4em;
+			}
+		}
+		p {
+			color:#4C5251;
+			text-align:center;
+		}
+		
+	}
+margin-right:0;
 }
 #art-wall-backer {
 	padding:0;
@@ -66,7 +99,7 @@
 	position:fixed;
 	right:0;
 	bottom:0;
-	@include span-columns(12);
+	width:100%;
 	background-color:black;
 	opacity:.8;
 	z-index:19;

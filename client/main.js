@@ -1,5 +1,6 @@
 Meteor.subscribe("walls");
 
+
 // Meteor.startup(function () {
 //   // Meteor.autorun(function () {
 //   //   // if (! Session.get("selected")) {
