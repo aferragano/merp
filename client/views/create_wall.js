@@ -1,15 +1,6 @@
 if (Meteor.isClient) {
 
 
-
-  Template.body.helpers({
-    walls: function(){
-        var marker_id = sessionStorage.getItem("marker.id");
-        return Markers.find();
-    }
-
-  });
-
   Template.body.events({
   	"submit form": function (event, template){
     	

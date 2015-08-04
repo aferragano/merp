@@ -1,19 +1,14 @@
 
 if (Meteor.isClient) {
-// var _dep = new Deps.Dependency
 
 	Template.art_wall.helpers({
 		
-
-
 		'artist_name': function(){
-			_dep.depend();
+			 // _newInfoDependency.changed();
 			marker_id = sessionStorage.getItem("marker.id");
 	    mark = Markers.find( { "_id": marker_id }).fetch()
 	    artistName = mark[0].graph[0][0].artistName
 	    sessionStorage.setItem("lastUpdate", new Date()  );
-	    // _dep.changed();
-	    $("#back-btn").hide();
 			return artistName
 		},
 		'crewName': function(){

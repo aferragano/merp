@@ -4,6 +4,7 @@ if (Meteor.isClient) {
     GoogleMaps.load();
   });
 
+
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
       google.maps.event.addListener(map.instance, 'click', function(event) {
@@ -32,9 +33,24 @@ if (Meteor.isClient) {
           
           google.maps.event.addListener(marker, 'click', function() {
           	console.log("click event")
+          	// _newInfoDependency.depend();
   
   					sessionStorage.setItem("marker.id", marker.id);
   					sessionStorage.setItem("lastUpdate", new Date()  );
+  					marker_id = sessionStorage.getItem("marker.id");
+				    mark = Markers.find( { "_id": marker_id }).fetch()
+				    artistName = mark[0].graph[0][0].artistName
+				    crewName = mark[0].graph[0][0].crewName
+				    artDescription = mark[0].graph[0][0].artDescription
+				    locationName = mark[0].graph[0][0].locationName
+				    photographerName = mark[0].graph[0][0].photographerName
+				    displayDate = mark[0].graph[0][0].displayDate
+				    date = mark[0].graph[0][0].date
+  					$("#artist-name").append(artistName);
+  					$("#crewName").append(crewName);
+  					$("#location-name").append(locationName);
+  					$("#photo-cred").append(photographerName);
+  					$("#artDescription").append(artDescription);
   					showArtWall()
             
   				});
@@ -63,7 +79,6 @@ if (Meteor.isClient) {
           delete markers[oldDocument._id];
         }
       });
-
     });
   });
 

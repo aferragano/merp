@@ -1,4 +1,4 @@
-Meteor.subscribe("walls");
+// Meteor.subscribe("walls");
 
 
 // Meteor.startup(function () {
