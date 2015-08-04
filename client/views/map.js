@@ -39,19 +39,34 @@ if (Meteor.isClient) {
   					sessionStorage.setItem("lastUpdate", new Date()  );
   					marker_id = sessionStorage.getItem("marker.id");
 				    mark = Markers.find( { "_id": marker_id }).fetch()
-				    artistName = mark[0].graph[0][0].artistName
-				    crewName = mark[0].graph[0][0].crewName
-				    artDescription = mark[0].graph[0][0].artDescription
-				    locationName = mark[0].graph[0][0].locationName
-				    photographerName = mark[0].graph[0][0].photographerName
-				    displayDate = mark[0].graph[0][0].displayDate
-				    date = mark[0].graph[0][0].date
-  					$("#artist-name").append(artistName);
-  					$("#crewName").append(crewName);
-  					$("#location-name").append(locationName);
-  					$("#photo-cred").append(photographerName);
-  					$("#artDescription").append(artDescription);
-  					showArtWall()
+				    if (mark[0].graph) {
+				    	console.log(mark)
+				    	console.log(mark[0])
+					    artistName = mark[0].graph[0][0].artistName
+					    crewName = mark[0].graph[0][0].crewName
+					    artDescription = mark[0].graph[0][0].artDescription
+					    locationName = mark[0].graph[0][0].locationName
+					    photographerName = mark[0].graph[0][0].photographerName
+					    displayDate = mark[0].graph[0][0].displayDate
+					    date = mark[0].graph[0][0].date
+					    console.log("mark")
+					    console.log(mark)
+					    console.log(mark[0].graph)
+					    $("#artist-name").val("");
+              $("#crewName").val("");
+              $("#location-name").val("");
+              $("#photo-cred").val("");
+              $("#artDescription").val(""); 
+	  					$("#artist-name").text(artistName);
+	  					$("#crewName").text(crewName);
+	  					$("#location-name").text(locationName);
+	  					$("#photo-cred").text(photographerName);
+	  					$("#artDescription").text(artDescription);
+	  					
+	  				} else {
+	  				//create a function to go straight to the add art to wall here if there is none currently
+	  				}
+					showArtWall()
             
   				});
 

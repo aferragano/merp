@@ -46,8 +46,33 @@ if (Meteor.isClient) {
 			marker_id = sessionStorage.getItem("marker.id");
 	    mark = Markers.find( { "_id": marker_id }).fetch()
 	    date = mark[0].graph[0][0].date
+	    console.log(mark)
 			return date
 		},
+		// 'graphs': function(){
+		// 	marker_id = sessionStorage.getItem("marker.id");
+	 //    mark = Markers.find( { "_id": marker_id }).fetch()
+	 //    console.log("meowMIX")
+	 //    console.log( mark)
+	 //    console.log( mark[0].graph.length)
+	 //    graph = []
+
+	 //    mark.forEach(function(art){
+	 //    	console.log("LALALALA")
+	 //    	console.log(art)
+	 //    	graph.push(art)
+
+	 //    })
+	 //    console.log("THIS IS YOUR POOP ARRAY OF ART")
+	 //    console.log(graph)
+
+	    // console.log(graphs)
+	    // console.log("elephant")
+
+	    // return graph.graph[0]
+	    // return mark[0].graph[0]
+			// return date
+		// },
 	})
 
 }
