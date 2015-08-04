@@ -3,9 +3,6 @@ if (Meteor.isClient) {
   Meteor.startup(function() {
     GoogleMaps.load();
   });
-  // Deps.autorun(function (){
-  //   console.log('bonusMode is now:');
-  // });
 
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
@@ -29,21 +26,15 @@ if (Meteor.isClient) {
           });
 
           function showArtWall() {
-          	console.log("boop")
           	document.getElementById('art-wall').style.display="block"
           	document.getElementById('art-wall-backer').style.display="block"
           }
           
           google.maps.event.addListener(marker, 'click', function() {
-  					console.log("this muther marker art wall")
-  					console.log(this)
-  					console.log(this.id)
-  					console.log(this.id)
-            console.log("beeboop")
+          	console.log("click event")
   
   					sessionStorage.setItem("marker.id", marker.id);
   					sessionStorage.setItem("lastUpdate", new Date()  );
-            console.log(sessionStorage)
   					showArtWall()
             
   				});
@@ -51,12 +42,6 @@ if (Meteor.isClient) {
 
           google.maps.event.addListener(marker, 'dragend', function(event) {
             Markers.update(marker.id, { $set: { lat: event.latLng.lat(), lng: event.latLng.lng() }});
-            console.log("!!!!!!!!!!!!!!!!!!!!!!!!marker.id")
-            console.log(marker._id)
-
-            // Session.set("Lat", "is-editing");
-            sessionStorage.setItem("marker.id", marker._id);
-            sessionStorage.setItem("lastUpdate", new Date()  );
             console.log(sessionStorage)
           });
 
@@ -66,7 +51,7 @@ if (Meteor.isClient) {
           markers[newDocument._id].setPosition({ lat: newDocument.lat, lng: newDocument.lng });
           // console.log(this);
           function showCreateForm() {
-          	console.log("booplalal")
+          	// console.log("booplalal")
           	document.getElementById('create-wall-form').style.display="block"
           	document.getElementById('create-wall-form-backer').style.display="block"
           }
