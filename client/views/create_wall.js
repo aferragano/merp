@@ -1,4 +1,16 @@
 if (Meteor.isClient) {
+    Images = new Mongo.Collection('images');
+
+// Images.attachSchema(new SimpleSchema({
+//   image: {
+//     type: String,
+//     autoform: {
+//       afFieldInput: {
+//         type: 'cloudinary'
+//       }
+//     }
+//   }
+// }));
 
 
   Template.body.events({
@@ -28,9 +40,9 @@ if (Meteor.isClient) {
 	    							artistName: event.target.artistName.value,
 	    							date: new Date()}] }
     	});
-    	Cloudinary.upload( function(){
-    		console.log("Frake")
-    	})
+    	// Cloudinary.upload( function(){
+    	// 	console.log("Frake")
+    	// })
         console.log(Markers)
 
     	var marker = Markers.find( { "_id": marker_id }).fetch()

@@ -2,6 +2,12 @@
 <template name="create_wall">
   <form class="add-to-art-wall" id="create-wall-form">
     <div >
+
+     
+
+      <input type="filepicker" data-fp-apikey="AFLjBK2fuR3yB6392VS5wz"
+onchange="alert(event.fpfile.url)">
+
       <li>
         <img src="/images/icons_spray_paint_can.png">
         <input id="artist-name-field" name="artistName" type="text" placeholder="Artist-Name"/>
@@ -33,6 +39,7 @@
       
       <img src="/images/icons_white_cloud_upload.png">
       <input id="" type="file"><br>
+
       <input id="submit" type="submit">
     </div>
   </form>
