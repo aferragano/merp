@@ -1,3 +1,4 @@
+
 if (Meteor.isClient) {
     Images = new Mongo.Collection('images');
 
@@ -30,6 +31,7 @@ if (Meteor.isClient) {
     	var photographerName = event.target.photographerName.value;
     	var artistName = event.target.artistName.value;
     	var imageName = event.target.imageName.value;
+        var photoFile = event.target.photoFile.value;
 
     	Markers.update( marker_id, {
     		$addToSet: { graph: [ { locationName: event.target.locationName.value,
@@ -38,7 +40,9 @@ if (Meteor.isClient) {
                                     displayDate: event.target.displayDate.value,
                                     artDescription: event.target.artDescription.value,
 	    							artistName: event.target.artistName.value,
-	    							date: new Date()}] }
+                                    photoFile: event.target.photoFile,
+	    							date: new Date()
+                                }] }
     	});
     	// Cloudinary.upload( function(){
     	// 	console.log("Frake")
