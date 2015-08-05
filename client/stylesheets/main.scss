@@ -12,79 +12,108 @@ body,html {
 }
 
 #muro-welcome {
-	background-color: #00A0B0;
-	border-radius:6px;
-	padding: 1em;
-	text-align: center;
-	position: fixed;
-	z-index: 10;
-	opacity: .9;
-	top: 5em;
-	color:white;
-	@include span-columns(6);
-	@include shift(3);
-}
-
-#map-btn {
-	background-color: #00A0B0;
-	border-radius:10px;
-	padding-right:4px;
-	padding-left:4px;
-	text-align: center;
-	position: fixed;
-	z-index: 10;
-	opacity: .9;
-	bottom:30px;
-	color:white;
-	@include span-columns(2);
-	@include shift(5);
-	img {
-		@include span-columns(12);
-
+	@include span-columns(12);
+	@include shift(0);
+	z-index:10;
+	position:fixed;
+	top:0;
+	@include media($mobile) {
+		img {
+		  @include span-columns(4);
+		  @include shift(0);
+		}
 	}
 }
 
-#map-tools{
-	display:none;
-	#create-wall-prompt{
-		background-color: #00A0B0;
-		z-index: 10;
-		color:white;
-		text-align: center;
-		position: fixed;
-		padding:1em;
-		bottom:5em;
-		right:0em;
+#main-nav {
+	padding:0;
+	margin:0;
+	background-color:black;
+	opacity: .8;
+	height:7em;
+	position:absolute;
+	bottom:0;
+	z-index:12;
+	border-top-left-radius:1em;
+	border-top-right-radius:1em;
+	@include span-columns(12);
+	#about-icon-btn, #map-icon-btn, #find-icon-btn{
+
+	}
+	@include media($mobile) {
 		@include span-columns(4);
-	}
-	#search-map-btn{
-		background-color: #00A0B0;
-		border-radius:6px;
-		z-index: 10;
-		color:white;
-		text-align: center;
-		position: fixed;
-		bottom:20em;
-		width:auto;
-		img{
-			height:70px;
+		#about-icon-btn, #map-icon-btn, #find-icon-btn{
+			
+			img {
+				margin-left:2.2em;
+				margin-right:2.2em;
+				@include span-columns(1);
+			}
 		}
-
 	}
-	#find-my-location{
-		background-color: #00A0B0;
-		border-radius:6px;
-		z-index: 10;
-		color:white;
-		text-align: center;
-		position: fixed;
-		bottom:5em;
-		width:auto;
+}
+#peek, #peek-search {
+	background-color:black;
+	opacity: .8;
+	height:4em;
+	@include span-columns(12);
+	position:absolute;
+	bottom:0;
+	border-top-left-radius:1em;
+	border-top-right-radius:1em;
+	z-index:15;
+	display:none;
+	#dot {
+		text-align:center;
+		float:center;
+		height:3em;
+		width:3em;
+		background-color:white;
+		margin:auto;
+		margin-top:6px;
+		border-radius:2em;
+	}
+}
+#peek-search {
+	padding: .5em;
+	padding-left:1.5em;
+	@include media($mobile){
 		img{
-			height:70px;
+			display:inline-block;
+			height:3em;
+			width:auto;
+			verticalalign:text-top;
+			padding-left:.3em;
 		}
-
 	}
 
+	input{
+		display:inline-block;
+		width:20em;
+		vertical-align:text-top;
+		height:4em;
+		marign-left:3em;
+		padding-left:2.5em;
+		text-align:center;
+		float:left;
+		margin-top:6px;
+		border-radius:.4em;
+		border:none;
+
+	}
+	display:none;
 }
 
+#logo-corner{
+	height:4em;
+	width:auto;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index:20;
+	img {
+		height:7em;
+		width:auto;
+	}
+	display:none;
+}

@@ -1,21 +1,29 @@
 <template name="page">
 	<div id="muro-welcome">
-		<h1> MURO </h1>
-		<h3>archive street art</h3>
-		<img src="/images/icons_white_wall.png">
+		<img src="/images/logo_muro.png">
+	</div>
+	<div id="logo-corner">
+		<img src="/images/logo_muro.png">
 	</div>
 
-	<div id="map-btn">  
-		<img src="/images/icons_white_photograph.png">
-	</div>
-	<div id="map-tools">
-		<div id="create-wall-prompt">create-wall-prompt</div>
-		<div id="search-map-btn">
+	<div id="main-nav"><br>
+		<div id="about-icon-btn">  
+			<img src="/images/icons_spray_paint_can.png">
+		</div>
+		<div id="map-icon-btn">  
+			<img src="/images/icons_white_map_and_marker.png">
+		</div>
+		<div id="find-icon-btn">  
 			<img src="/images/icons_white_magnifying_glass.png">
 		</div>
-		<div id="find-my-location">
-			<img src="/images/icons_white_marker.png">
-		</div>
+
+	</div>
+	<div id="peek"><div id="dot"></div></div>
+	<div id="peek-search">
+		<input>
+		<img src="/images/icons_white_magnifying_glass.png">
+		<img src="/images/icons_white_x_circle.png">
+		
 	</div>
 	{{> create_wall}}
 	{{> art_wall}}

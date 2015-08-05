@@ -18,3 +18,4 @@ natestrauser:filepicker-plus
 meteorhacks:npm
 cfs:standard-packages
 cfs:gridfs
+cfs:filesystem

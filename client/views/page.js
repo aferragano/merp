@@ -6,11 +6,20 @@ if (Meteor.isClient) {
   });
 
   Template.page.events({
-    'click #map-btn': function () {
+    'click #map-icon-btn': function () {
       document.getElementById('muro-welcome').style.display="none"
-      document.getElementById('map-btn').style.display="none"
-      document.getElementById('map-tools').style.display="block"
-      
+      document.getElementById('main-nav').style.display="none"
+      document.getElementById('peek').style.display="block"
+      document.getElementById('logo-corner').style.display="block"
+    },
+    'click #find-icon-btn': function () {
+      document.getElementById('muro-welcome').style.display="none"
+      document.getElementById('main-nav').style.display="none"
+      document.getElementById('peek-search').style.display="block"
+    },
+    'click #peek': function () {
+      document.getElementById('main-nav').style.display="block" 
+      document.getElementById('peek').style.display="none"      
     },
     'click #create-wall-form-backer': function () {
       document.getElementById('muro-welcome').style.display="none"
