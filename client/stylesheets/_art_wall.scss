@@ -4,92 +4,117 @@
 	position:fixed;
 	right:0;
 	bottom:0;
-	@include span-columns(10 of 12);
+	@include span-columns(12 of 12);
 	background-color:black;
 	opacity:.8;
 	z-index:20;
 	height:100%;
 	display:none;
 	color:white;
-
 	#back-btn{
+		margin-top:3px;
 		@include span-columns(2);
 		img {
 			height:40px;
 		}
-
+	}
+	#search-muro-logo {
+		background-color:white;
+		margin-top:3px;
+		@include span-columns(1.6 of 4);
+		margin-left:18%;
+		img {
+			margin-left:auto;
+			margin-right:auto;
+			text-align:center;
+			height:40px;
+		}
 	}
 	#add-btn{
+		margin-top:3px;
 		@include span-columns(1);
 		position:fixed;
-		right:0;
+		right:10px;
 		img {
 			height:40px;
 		}
-
-	}
-	#artist-name{
-		@include span-columns(6 of 10);
-		@include shift(2);
-	}
-	#location-name{
-		@include span-columns(6 of 10);
-		@include shift(2);
-		text-align:center;
-
-	}
-	.main-photo{
-		background-color:white;
-		position:relative;
-		text-align:center;
-		margin-left:auto;
-		margin-right:auto;
-		top:auto;
-		img {
-			@include span-columns(6 of 10);
-			@include shift(2);
-			height:auto;
-		}
-	}
-	#photo-cred{
-		@include span-columns(4 of 10);
-		@include shift(5);
-	}
-	.description{
-		margin-top:2em;
-		@include span-columns(8 of 10);
-		@include shift(1);
-		text-align:center;
 	}
 	.wall-history{
-		@include span-columns(10 of 10);
-		background-color:#8F9998;
-		height:12em;
+		margin:0;
+		padding:0;
+		@include span-columns(12 of 12);
+		background-color:black;
     overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-		
-
-		h2 {
-			@include span-columns(10 of 10);
+    height:100%;
+    @include media($mobile){ 
+    	@include span-columns(4 of 4);
+  	}
+    
+		li.graph-container{
+			margin:0;
+			overflow-y: scroll;
+			overflow-x: scroll;
+			padding:0;
 			display:block;
-		}
-
-		li.thumbnail-img{
-			display:inline-block;
 			list-style:none;
-			margin: .5em;
-			height:50px;
-			img{
-				margin: 1em;
-				height:4em;
+    	overflow-y: scroll;
+			
+			@include media($mobile){
+				@include span-columns(4 of 4);
+				display:block;
+				padding:0;
+				margin:0;
+
+				h2.artist-name{
+					margin: .5em 0 .25em 0;
+					padding:0;
+					font-size:2.5em; 
+					display:block;
+					@include span-columns(4 of 4);
+					text-align:right;
+					float:right;
+
+				}
+				.photo-cred{
+					padding:0;
+					margin: 0 0 0 0;
+					display:block;
+					@include span-columns(2);
+					@include shift(2);
+					font-size: .5em;
+					text-align:right;
+					float:right;
+
+				}
+				.art-description{
+					display:block;
+					text-align:right;
+					@include span-columns(4 of 4);
+				}
+
+				img {
+					padding:0;
+					marign:0;
+					height:auto;
+					vertical-align:text-top;
+					display:inline-block;
+					width:90%;
+					float:right;
+					border:1px solid white;
+				}
+				p.time {
+					float:left;
+					width:9%;
+					font-size:3em;
+					padding:0em 0em 0em 0;
+					margin:1.25em 0 0 1px;
+					vertical-align:text-top;
+					display:inline-block;
+					color:white;
+					transform:rotate(-90deg);
+				}
 			}
 		}
-		p {
-			color:#4C5251;
-			text-align:center;
-		}
-		
 	}
 margin-right:0;
 }

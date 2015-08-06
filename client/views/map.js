@@ -29,6 +29,7 @@ if (Meteor.isClient) {
           function showArtWall() {
           	document.getElementById('art-wall').style.display="block"
           	document.getElementById('art-wall-backer').style.display="block"
+            document.getElementById('logo-corner').style.display="none" 
           }
           
           google.maps.event.addListener(marker, 'click', function() {

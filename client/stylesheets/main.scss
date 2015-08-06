@@ -5,7 +5,7 @@
 @import "map";
 @import "create-wall";
 @import "art_wall";
-
+@import "search";
 
 body,html {
 	margin:0;
@@ -56,60 +56,6 @@ body,html {
 		}
 	}
 
-}
-#peek, #peek-search {
-	background-color:black;
-	opacity: .8;
-	height:4em;
-	@include span-columns(12);
-	position:absolute;
-	bottom:0;
-	border-top-left-radius:1em;
-	border-top-right-radius:1em;
-	z-index:15;
-	display:none;
-	#dot,#fat-cap {
-		position:fixed;
-		text-align:center;
-		float:center;
-		height:3em;
-		width:3em;
-		float:center;
-		margin-left:43.5%;
-		margin-right:auto;
-
-		margin-top:6px;
-
-	}
-}
-#peek-search {
-	padding: .5em;
-	padding-left:1.5em;
-	@include media($mobile){
-		img{
-			display:inline-block;
-			height:3em;
-			width:auto;
-			verticalalign:text-top;
-			padding-left:.3em;
-		}
-	}
-
-	input{
-		display:inline-block;
-		width:20em;
-		vertical-align:text-top;
-		height:4em;
-		marign-left:3em;
-		padding-left:2.5em;
-		text-align:center;
-		float:left;
-		margin-top:6px;
-		border-radius:.4em;
-		border:none;
-
-	}
-	display:none;
 }
 
 #logo-corner{
