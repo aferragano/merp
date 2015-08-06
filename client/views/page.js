@@ -28,11 +28,16 @@ if (Meteor.isClient) {
       document.getElementById('peek').style.display="none"
       document.getElementById('logo-corner').style.display="block"      
     },
+    //WUT WUT INFO PAGE
+    'click #about-icon-btn': function () {
+      document.getElementById('muro-welcome').style.display="none"
+      document.getElementById('main-nav').style.display="none"
+      document.getElementById('about').style.display="block"  
+    },
     'click #create-wall-form-backer': function () {
       document.getElementById('muro-welcome').style.display="none"
       document.getElementById('create-wall-form').style.display="none"
       document.getElementById('create-wall-form-backer').style.display="none"
-
     },
     'click #back-btn': function () {
       console.log("boop LALAMLAMALMLAMLAMA")

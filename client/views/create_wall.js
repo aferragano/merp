@@ -9,30 +9,7 @@ if (Meteor.isClient) {
   Template.body.events({
 
     'change #photoFile':function(event, template){
-        // FS.Utility.eachFile(event,function(file){
-            
-        //     console.log("photoFile photoFile photoFile photoFile photoFile photoFile ")
-        //     var fileObj = new FS.File(file)
-        //     Uploads.insert(fileObj, function(err){
-        //         console.log(err);
-        //     })
-        // })
-        // FS.Utility.eachFile(event,function(file){
-        //     Images.insert(file, function (err, fileObj){
-        //         if (err){
-        //             console.log("ERRORRRRRRR")
-        //             console.log(err)
 
-        //         }else{
-        //             // var marker = Meteor.markerId();
-        //             var imagesUrl = {
-        //                 "wall.image": "/cfs/files/images/" + fileObj._id
-        //             };
-        //             // Meteor.markers.update( )
-        //             console.log("HURRAY")
-        //         }
-        //     })
-        // })
     },
 
   	"submit form": function (event, template){

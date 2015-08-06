@@ -1,0 +1,30 @@
+#about{
+	@include span-columns(12);
+	height:100%;
+	background-color:white;
+	opacity:.9;
+	z-index:22;
+	position:fixed;
+	top:0;
+	left:0;
+	h2 {
+		letter-spacing: 4px;
+	}
+	p {
+		padding:10px;
+		padding-top:0px;
+	}
+	img {
+		@include span-columns(12);
+	}
+
+	@include media($mobile) {
+	  @include span-columns(4);
+	  height:667px;
+	  display:none;
+	  img	{
+	  	@include span-columns(4);
+	  }
+	}
+	display:none;
+}
