@@ -34,6 +34,11 @@ if (Meteor.isClient) {
       document.getElementById('main-nav').style.display="none"
       document.getElementById('about').style.display="block"  
     },
+    'click #about': function () {
+      document.getElementById('muro-welcome').style.display="block"
+      document.getElementById('main-nav').style.display="block"
+      document.getElementById('about').style.display="none"  
+    },
     'click #create-wall-form-backer': function () {
       document.getElementById('muro-welcome').style.display="none"
       document.getElementById('create-wall-form').style.display="none"
