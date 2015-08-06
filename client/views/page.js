@@ -16,10 +16,17 @@ if (Meteor.isClient) {
       document.getElementById('muro-welcome').style.display="none"
       document.getElementById('main-nav').style.display="none"
       document.getElementById('peek-search').style.display="block"
+      document.getElementById('logo-corner').style.display="block"
+    },
+    'click #x-circle': function () {
+      document.getElementById('peek-search').style.display="none" 
+      document.getElementById('peek').style.display="block" 
+      document.getElementById('logo-corner').style.display="block"     
     },
     'click #peek': function () {
       document.getElementById('main-nav').style.display="block" 
-      document.getElementById('peek').style.display="none"      
+      document.getElementById('peek').style.display="none"
+      document.getElementById('logo-corner').style.display="block"      
     },
     'click #create-wall-form-backer': function () {
       document.getElementById('muro-welcome').style.display="none"

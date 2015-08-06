@@ -48,9 +48,12 @@ body,html {
 				margin-left:2.2em;
 				margin-right:2.2em;
 				@include span-columns(1);
+				vertical-align:text-top;
+
 			}
 		}
 	}
+
 }
 #peek, #peek-search {
 	background-color:black;
@@ -63,15 +66,18 @@ body,html {
 	border-top-right-radius:1em;
 	z-index:15;
 	display:none;
-	#dot {
+	#dot,#fat-cap {
+		position:fixed;
 		text-align:center;
 		float:center;
 		height:3em;
 		width:3em;
-		background-color:white;
-		margin:auto;
+		float:center;
+		margin-left:43.5%;
+		margin-right:auto;
+
 		margin-top:6px;
-		border-radius:2em;
+
 	}
 }
 #peek-search {
