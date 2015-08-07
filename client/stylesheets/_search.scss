@@ -31,12 +31,13 @@
 			width:auto;
 			verticalalign:text-top;
 			padding-left:.3em;
+			vertical-align:text-top;
 		}
 	}
 
 	input{
 		display:inline-block;
-		width:20em;
+		width:16em;
 		vertical-align:text-top;
 		height:4em;
 		marign-left:3em;
@@ -46,6 +47,7 @@
 		margin-top:6px;
 		border-radius:.4em;
 		border:none;
+		vertical-align:text-top;
 
 	}
 	display:none;
@@ -62,7 +64,7 @@
 	padding:1em;
 	input{
 		display:inline-block;
-		width:20em;
+		width:16em;
 		vertical-align:text-top;
 		height:4em;
 		marign-left:3em;
@@ -72,6 +74,8 @@
 		margin-top:6px;
 		border-radius:.4em;
 		border:none;
+		vertical-align:text-top;
+
 	}
 	img{
 		@include span-columns(1);
@@ -79,6 +83,7 @@
 	@include media($mobile){
 		@include span-columns(4);
 		img{
+			vertical-align:text-top;
 			display:inline-block;
 			height:3em;
 			width:auto;

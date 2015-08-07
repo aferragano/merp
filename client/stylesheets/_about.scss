@@ -8,14 +8,15 @@
 	top:0;
 	left:0;
 	h2 {
+		display:inline-block;
 		letter-spacing: 4px;
+		margin:0;
+		padding:0;
 	}
 	p {
-		padding:10px;
+		display:inline-block;
+		padding:4px;
 		padding-top:0px;
-	}
-	img {
-		@include span-columns(12);
 	}
 
 	@include media($mobile) {
@@ -23,6 +24,7 @@
 	  height:667px;
 	  display:none;
 	  img	{
+
 	  	@include span-columns(4);
 	  }
 	}
