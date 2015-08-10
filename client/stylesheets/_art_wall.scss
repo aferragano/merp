@@ -22,12 +22,12 @@
 		background-color:white;
 		margin-top:3px;
 		@include span-columns(1.6 of 4);
-		margin-left:18%;
+		margin-left:14%;
 		img {
 			margin-left:auto;
 			margin-right:auto;
 			text-align:center;
-			height:40px;
+			height:34px;
 		}
 	}
 	#add-btn{
@@ -108,6 +108,7 @@
 					border:1px solid white;
 				}
 				p.time {
+					opacity:.4;
 					float:left;
 					width:9%;
 					font-size:3em;

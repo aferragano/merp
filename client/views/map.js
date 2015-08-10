@@ -4,9 +4,10 @@ if (Meteor.isClient) {
     GoogleMaps.load();
   });
 
-
   Template.map.onCreated(function() {
     GoogleMaps.ready('map', function(map) {
+
+
       google.maps.event.addListener(map.instance, 'click', function(event) {
         Markers.insert({ lat: event.latLng.lat(), lng: event.latLng.lng()});
 
@@ -19,7 +20,7 @@ if (Meteor.isClient) {
         added: function (thing) {
           var marker = new google.maps.Marker({
             draggable: true,
-            icon: "/images/wall_gray-01.png",
+            icon: "/images/marker-01.png",
             animation: google.maps.Animation.DROP,
             position: new google.maps.LatLng(thing.lat, thing.lng),
             map: map.instance,
@@ -101,8 +102,32 @@ if (Meteor.isClient) {
 
   Template.map.helpers({
     mapOptions: function() {
+
       if (GoogleMaps.loaded()) {
+
         return {
+          styles:[
+  {
+    stylers: [
+      { hue: "#00ffe6" },
+      { saturation: -20 }
+    ]
+  },{
+    featureType: "road",
+    elementType: "geometry",
+    stylers: [
+      { lightness: 100 },
+      { visibility: "simplified" }
+    ]
+  },{
+    featureType: "road",
+    elementType: "labels",
+    stylers: [
+      { visibility: "off" }
+    ]
+  }
+],
+
         	 
           center: new google.maps.LatLng(37.7833, -122.4167),
           zoom: 14

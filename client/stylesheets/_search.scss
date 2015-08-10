@@ -80,6 +80,9 @@
 	img{
 		@include span-columns(1);
 	}
+	#displayDate-name-field{
+		margin-top:10px;
+	}
 	@include media($mobile){
 		@include span-columns(4);
 		img{

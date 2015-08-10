@@ -16,20 +16,34 @@
 		height:50px;
 	}
 	input {
+		margin:0;
+		padding:0;
 		text-align:center;
 		display:inline-block;
 		@include span-columns(4);
-
 		border-radius: 6px;
 		border:none;
 		height:3em;
 		height:50px;
+		@include media($mobile){
+		height:50px;
+			@include span-columns(3);
+			vertical-align:text-top;
+		}
+
 	}
 	img {
+		margin:20px 0 0 0;
+		padding:0;
 		text-align:center;
 		float:left;
 		height:50px;
 		display:inline-block;
+		@include media($mobile){
+			height:50px;
+			@include span-columns(1);
+			vertical-align:text-top;
+		}
 	}
 
 	#artist-name-field{
@@ -40,15 +54,23 @@
 	}
 	#image-name{
 	}
-	#submit{
+	input#submit{
 		display:block;
+		background-color:white;
 
 		@include span-columns(2);
 		padding:.2em;
 		margin:.2em;
 		border-radius: 6px;
 		border:none;
-		height:2em;
+		border-radius:1em;
+		height:4em;
+
+		@include media($mobile){
+			width:7em;
+			padding:5px;
+			float:right
+		}
 	}
 
 }
@@ -64,4 +86,5 @@
 	z-index:19;
 	height:100%;
 	display:none;
+
 } 
