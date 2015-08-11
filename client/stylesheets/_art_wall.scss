@@ -1,4 +1,4 @@
-#art-wall {
+#art-wall, #full-search {
 	padding:0;
 	margin:0;
 	position:fixed;
@@ -21,8 +21,9 @@
 	#search-muro-logo {
 		background-color:white;
 		margin-top:3px;
-		@include span-columns(1.6 of 4);
-		margin-left:14%;
+		text-align:center;
+		@include span-columns(2.5 of 4);
+		margin-left:4%;
 		img {
 			margin-left:auto;
 			margin-right:auto;
@@ -76,8 +77,8 @@
 					font-size:2.5em; 
 					display:block;
 					@include span-columns(4 of 4);
-					text-align:right;
-					float:right;
+					text-align:center;
+					float:center;
 					letter-spacing:1.5px;
 
 				}

@@ -57,11 +57,11 @@
 	position:absolute;
 	top:0;
 	left:0;
-	@include span-columns(12);
+	
 	background-color:black;
 	opacity: .8;
 	height:100%;
-	padding:1em;
+	padding:.2em;
 	input{
 		display:inline-block;
 		width:16em;
@@ -74,24 +74,26 @@
 		margin-top:6px;
 		border-radius:.4em;
 		border:none;
-		vertical-align:text-top;
+		vertical-align:text-bottom;
 
 	}
 	img{
 		@include span-columns(1);
+		vertical-align:text-top;
 	}
 	#displayDate-name-field{
 		margin-top:10px;
 	}
 	@include media($mobile){
-		@include span-columns(4);
+		@include span-columns(4 of 4);
 		img{
-			vertical-align:text-top;
+			vertical-align:text-bottom;
 			display:inline-block;
 			height:3em;
 			width:auto;
 			verticalalign:text-top;
-			padding-left:.3em;
+			padding-top:.2em;
+			padding-left:.2em;
 		}
 	display:none;
 	}

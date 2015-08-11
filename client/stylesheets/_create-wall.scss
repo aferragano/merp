@@ -15,7 +15,7 @@
 		margin:20px;
 		height:50px;
 	}
-	input {
+	input{
 		margin:0;
 		padding:0;
 		text-align:center;
@@ -31,6 +31,10 @@
 			vertical-align:text-top;
 		}
 
+	}
+	#photoFile {
+		padding:1em;
+		color:red;
 	}
 	img {
 		margin:20px 0 0 0;
@@ -54,6 +58,22 @@
 	}
 	#image-name{
 	}
+	#displayDate-name-field {
+		@include media($mobile){
+			height:1.5em;
+			margin-top:15px;;
+			width:165px;
+		}
+		vertical-align:middle;
+		font-size:1em;
+		padding-top:90px;
+	}
+	input#photoFile {
+		
+		background-color:black;
+		color:black;
+	}
+
 	input#submit{
 		display:block;
 		background-color:white;
