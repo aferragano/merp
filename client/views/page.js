@@ -69,6 +69,7 @@ if (Meteor.isClient) {
     },
     'touchstart #create-wall-form-backer': function (event, template) {
       document.getElementById('muro-welcome').style.display="none"
+      document.getElementById('main-nav').style.display="block"
       document.getElementById('create-wall-form').style.display="none"
       document.getElementById('create-wall-form-backer').style.display="none"
       document.getElementById('logo-corner').style.display="block"
@@ -93,6 +94,7 @@ if (Meteor.isClient) {
       document.getElementById('create-wall-form').style.display="block"
       document.getElementById('create-wall-form-backer').style.display="block"
       document.getElementById('logo-corner').style.display="none" 
+      document.getElementById('main-nav').style.display="none"
     }
 
   });

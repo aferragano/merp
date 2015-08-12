@@ -7,4 +7,8 @@
 	  @include span-columns(4);
 	  height:667px;
 	}
+	@include media($tablet){ 
+  	@include span-columns(8 of 8);
+  	height:1024px;
+	}
 }
