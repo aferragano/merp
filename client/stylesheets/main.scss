@@ -41,13 +41,12 @@ button {
 	padding:0;
 	margin:0;
 	background-color:black;
-	opacity: .8;
-	height:7em;
+	opacity: .83;
+	height:6em;
 	position:absolute;
 	bottom:0;
 	z-index:12;
-	border-top-left-radius:1em;
-	border-top-right-radius:1em;
+	
 	@include span-columns(12);
 	#about-icon-btn, #map-icon-btn, #find-icon-btn{
 
@@ -57,8 +56,9 @@ button {
 		#about-icon-btn, #map-icon-btn, #find-icon-btn{
 			
 			img {
-				margin-left:2.2em;
-				margin-right:2.2em;
+
+				margin-left:2em;
+				margin-right:2em;
 				@include span-columns(1);
 				vertical-align:text-top;
 

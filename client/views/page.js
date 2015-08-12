@@ -11,7 +11,7 @@ if (Meteor.isClient) {
       document.getElementById('muro-welcome').style.display="none"
       document.getElementById('main-nav').style.display="none"
       document.getElementById('peek').style.display="block"
-      document.getElementById('logo-corner').style.display="block"
+      document.getElementById('logo-corner').style.display="none"
     },
     'touchstart #muro-welcome': function (event, template) {
       document.getElementById('muro-welcome').style.display="none"
@@ -28,8 +28,9 @@ if (Meteor.isClient) {
     },
     //bye bye search field
     'touchstart #x-circle': function (event, template) {
+      document.getElementById('main-nav').style.display="block"
       document.getElementById('peek-search').style.display="none" 
-      document.getElementById('peek').style.display="block" 
+      document.getElementById('peek').style.display="none" 
       document.getElementById('logo-corner').style.display="block"     
     },
     //show full search view
@@ -40,8 +41,9 @@ if (Meteor.isClient) {
       document.getElementById('full-search').style.display="block"
     },
     'touchstart #x-circle-find': function (event, template) {
+      document.getElementById('main-nav').style.display="block"
       document.getElementById('peek-search').style.display="none" 
-      document.getElementById('peek').style.display="block" 
+      document.getElementById('peek').style.display="none" 
       document.getElementById('logo-corner').style.display="block"
       document.getElementById('full-search').style.display="none"
     },
@@ -56,14 +58,14 @@ if (Meteor.isClient) {
       document.getElementById('muro-welcome').style.display="none"
       document.getElementById('main-nav').style.display="none"
       document.getElementById('about').style.display="block"
-      document.getElementById('logo-corner').style.display="block"  
+      document.getElementById('logo-corner').style.display="none"  
     },
     //BYE BYE INFO/about PAGE
     'touchstart #about': function (event, template) {
-      document.getElementById('muro-welcome').style.display="block"
+      document.getElementById('muro-welcome').style.display="none"
       document.getElementById('main-nav').style.display="block"
       document.getElementById('about').style.display="none"
-      document.getElementById('logo-corner').style.display="none" 
+      document.getElementById('logo-corner').style.display="block" 
     },
     'touchstart #create-wall-form-backer': function (event, template) {
       document.getElementById('muro-welcome').style.display="none"
