@@ -6,12 +6,13 @@
 	right:0;
 	bottom:0;
 	@include span-columns(10);
-	background-color:black;
+	background-color:#424242;
 	opacity:.8;
 	z-index:20;
 	display:none;
 	margin-right:0;
 	li{
+		list-style:none;
 		margin:20px;
 		height:50px;
 	}
@@ -101,7 +102,7 @@
 	right:0;
 	bottom:0;
 	width:100%;
-	background-color:black;
+	background-color:424242;
 	opacity:.8;
 	z-index:19;
 	height:100%;

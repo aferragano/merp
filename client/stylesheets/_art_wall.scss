@@ -5,7 +5,7 @@
 	right:0;
 	bottom:0;
 	@include span-columns(12 of 12);
-	background-color:black;
+	background-color:#424242;
 	opacity:.95;
 	z-index:20;
 	height:100%;
@@ -18,8 +18,12 @@
 			height:40px;
 		}
 	}
+	.muro-letters{
+		height:40px;
+		background-color:none;
+	}
 	#search-muro-logo {
-		background-color:white;
+		
 		margin-top:3px;
 		text-align:center;
 		@include span-columns(2.5 of 4);
@@ -44,7 +48,7 @@
 		margin:0;
 		padding:0;
 		@include span-columns(12 of 12);
-		background-color:black;
+		background-color:#424242;
     overflow-x: scroll;
      -webkit-overflow-scrolling: touch;
     
