@@ -28,6 +28,7 @@ button {
 	z-index:10;
 	position:fixed;
 	top:0;
+	
 	@include media($mobile) {
 		img {
 		  @include span-columns(4);

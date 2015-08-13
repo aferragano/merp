@@ -1,19 +1,19 @@
 #create-wall-form {
-	padding:0;
-	margin:0;
+	padding:0 20px 0 20px;
+	margin: 0 ;
 	height:100%;
 	position:absolute;
-	right:0;
+	right:-10px;
 	bottom:0;
 	@include span-columns(10);
 	background-color:#424242;
-	opacity:.8;
+	opacity:.9;
 	z-index:20;
 	display:none;
-	margin-right:0;
 	li{
 		list-style:none;
-		margin:20px;
+		width:100%;
+		margin: 20px 0 20px 0 ;
 		height:50px;
 	}
 	input{
@@ -21,13 +21,13 @@
 		padding:0;
 		text-align:center;
 		display:inline-block;
-		@include span-columns(4);
+		@include span-columns(3.5);
 		border-radius: 6px;
 		border:none;
 		height:3em;
 		height:50px;
 		@include media($mobile){
-		height:50px;
+			height:50px;
 			@include span-columns(3);
 			vertical-align:text-top;
 		}
@@ -38,12 +38,13 @@
 		color:red;
 	}
 	img {
-		margin:20px 0 0 0;
+		margin:0 0 0 0;
 		padding:0;
 		text-align:center;
 		float:left;
 		height:50px;
 		display:inline-block;
+		vertical-align:text-top;
 		@include media($mobile){
 			height:50px;
 			@include span-columns(1);
@@ -61,8 +62,8 @@
 	}
 	#displayDate-name-field {
 		@include media($mobile){
-			height:1.5em;
-			margin-top:15px;;
+			height:2.5em;
+			margin-top:5px;
 			width:165px;
 		}
 		vertical-align:middle;
@@ -70,17 +71,15 @@
 		padding-top:90px;
 	}
 	input#photoFile {
-		
-		background-color:black;
-		color:black;
+		background-color:#424242;
+		color:#424242;;
 	}
 
 	input#submit{
 		display:block;
 		background-color:white;
-
-		@include span-columns(2);
-		padding:.2em;
+		@include span-columns(3);
+		padding:0m;
 		margin:.2em;
 		border-radius: 6px;
 		border:none;
@@ -88,9 +87,10 @@
 		height:4em;
 
 		@include media($mobile){
-			width:7em;
-			padding:5px;
-			float:right
+			width:10em;
+			letter-spacing:3px;
+			padding:0px;
+			float:right;
 		}
 	}
 
@@ -102,8 +102,8 @@
 	right:0;
 	bottom:0;
 	width:100%;
-	background-color:424242;
-	opacity:.8;
+	background-color:#424242;
+	opacity:.3;
 	z-index:19;
 	height:100%;
 	display:none;
