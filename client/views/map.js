@@ -153,7 +153,7 @@ if (Meteor.isClient) {
           zoom: 14,
           zoomControlOptions: {
               style: google.maps.ZoomControlStyle.LARGE,
-              position: google.maps.ControlPosition.LEFT_CENTER
+              position: google.maps.ControlPosition.LEFT_TOP
           },
           scaleControl: true,
           streetViewControl: false,
