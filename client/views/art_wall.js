@@ -9,6 +9,8 @@ if (Meteor.isClient) {
 	    mark = Markers.find( { "_id": marker_id }).fetch()
 	    artistName = mark[0].graph[0][0].artistName
 	    sessionStorage.setItem("lastUpdate", new Date()  );
+	    console.log(artistName)
+
 			return artistName
 		},
 		'crewName': function(){
