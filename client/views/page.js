@@ -95,6 +95,12 @@ if (Meteor.isClient) {
       document.getElementById('create-wall-form-backer').style.display="block"
       document.getElementById('logo-corner').style.display="none" 
       document.getElementById('main-nav').style.display="none"
+    },
+    'touchstart .graf': function(event,template) {
+      // console.log(this)
+      // $(".graf").hide();
+      
+      // $(this).style.display="none" 
     }
 
   });
