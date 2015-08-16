@@ -96,11 +96,20 @@ if (Meteor.isClient) {
       document.getElementById('logo-corner').style.display="none" 
       document.getElementById('main-nav').style.display="none"
     },
-    'touchstart .graf': function(event,template) {
-      // console.log(this)
-      // $(".graf").hide();
+    'change .graf': function(event,template) {
+      console.log("focused")
+    //   console.log(this)
       
-      // $(this).style.display="none" 
+    //   $(".graf").width("400");
+    //   $(".graf").height("auto");
+
+    // },
+    // 'touchstart .graf': function(event,template) {
+    //   console.log(this)
+      
+    //   $(".graf").width("400");
+    //   $(".graf").height("auto");
+
     }
 
   });
