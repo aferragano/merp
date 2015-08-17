@@ -142,7 +142,7 @@ if (Meteor.isClient) {
             },{
               "featureType":"water",
               "elementType":"all",
-              "stylers":[{"color":"#c2cbd9"},{"visibility":"on"}]
+              "stylers":[{"color":"#424242"},{"visibility":"on"}]
             },
             
           ],

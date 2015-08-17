@@ -6,6 +6,7 @@
 @import "create-wall";
 @import "search";
 @import "art_wall";
+@import "artist-history";
 
 @import "comment";
 
@@ -31,6 +32,7 @@ button {
 	
 	@include media($mobile) {
 		img {
+		
 		  @include span-columns(4);
 		  @include shift(0);
 		}
