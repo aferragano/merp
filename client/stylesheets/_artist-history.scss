@@ -53,10 +53,39 @@
 				width:auto;
 			}
 		}
+		
+	}
+	.location{
+		background-color:#424242;
+		@include span-columns(2 of 4);
+		@include shift(1);
+		padding:.3em;
+		color:white;
+		border-radius:1em;
+		text-align:center;
+
+	}
+	.label{
+		@include span-columns(2 of 4);
+		@include shift(1);
+		padding:.3em;
+		box-shadow: 1px 1px 3px #424242;
+		border-radius:1em;
+		text-align:center;
 	}
 	
 	//hide-artist = hide div ... or back button
-	.hide-artist{
+	#hide-artist{
+		margin-top:3px;
+		font-size:1.2em;
+		margin-top:1em;
+		margin-left:15px;
+		color:#424242;
+		display:block;
+		@include span-columns(4);
+		img {
+			height:40px;
+		}
 
 	}
 	display:none;
