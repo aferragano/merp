@@ -6,6 +6,7 @@
 @import "create-wall";
 @import "search";
 @import "art_wall";
+@import "artist-history";
 
 @import "comment";
 
@@ -31,6 +32,7 @@ button {
 	
 	@include media($mobile) {
 		img {
+
 		  @include span-columns(4);
 		  @include shift(0);
 		}
@@ -47,7 +49,6 @@ button {
 	position:absolute;
 	bottom:0;
 	z-index:12;
-	
 	@include span-columns(12);
 	#about-icon-btn, #map-icon-btn, #find-icon-btn{
 
@@ -55,9 +56,7 @@ button {
 	@include media($mobile) {
 		@include span-columns(4);
 		#about-icon-btn, #map-icon-btn, #find-icon-btn{
-			
 			img {
-
 				margin-left:2em;
 				margin-right:2em;
 				@include span-columns(1);

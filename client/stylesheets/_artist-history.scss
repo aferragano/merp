@@ -1,0 +1,92 @@
+#artist-history{
+	z-index:1000;
+	position:absolute;
+	left:0;
+	top:0;
+	padding:0;
+	margin:0;
+	height:100%;
+	@include span-columns(12 of 12);
+	background-color:white;
+	overflow-x:scroll;
+	.name{
+		font-size:1.5em; 
+		float:center;
+		display:block;
+		@include span-columns(4 of 4);
+		margin-bottom:0;
+		text-align:center;
+		float:center;
+		
+		color:#424242;
+		font-size:1.5em;
+		letter-spacing:.6em;
+		border-radius:1em;
+
+	}
+	h2{
+		@include span-columns(4 of 4);
+		text-align: center;
+		color: #424242;
+		background-color: white;
+		border-raidus: .4em;
+		
+	}
+	.img-wrapper{
+		
+		@include span-columns(4 of 4);
+		height:8em;
+		width:10em;
+		overflow-x:hidden;
+		overflow-y:hidden;
+		display:inline-block;
+		padding:.4em;
+		margin:0;
+		border-radius:.6em;
+		img{
+			padding:0;
+			margin:0;
+			border-radius:.6em;
+			text-align:center;
+			@include media($mobile){
+				height:100%;
+				width:auto;
+			}
+		}
+		
+	}
+	.location{
+		background-color:#424242;
+		@include span-columns(2 of 4);
+		@include shift(1);
+		padding:.3em;
+		color:white;
+		border-radius:1em;
+		text-align:center;
+
+	}
+	.label{
+		@include span-columns(2 of 4);
+		@include shift(1);
+		padding:.3em;
+		box-shadow: 1px 1px 3px #424242;
+		border-radius:1em;
+		text-align:center;
+	}
+	
+	//hide-artist = hide div ... or back button
+	#hide-artist{
+		margin-top:3px;
+		font-size:1.2em;
+		margin-top:1em;
+		margin-left:15px;
+		color:#424242;
+		display:block;
+		@include span-columns(4);
+		img {
+			height:40px;
+		}
+
+	}
+	display:none;
+}

@@ -6,13 +6,19 @@
 	bottom:0;
 	@include span-columns(12 of 12);
 	background-color:#424242;
+	background-color:white;
 	opacity:.95;
 	z-index:20;
 	height:100%;
 	display:none;
 	color:white;
+
 	#back-btn{
 		margin-top:3px;
+		font-size:1.2em;
+		margin-top:1em;
+		margin-left:15px;
+		color:#424242;
 		@include span-columns(2);
 		img {
 			height:40px;
@@ -21,55 +27,85 @@
 	.muro-letters{
 		height:40px;
 		background-color:none;
+		color:#424242;
+		border-radius:1em;
+		padding:.3em;
+		box-shadow: 3px 3px 4px #424242;
 	}
 	#search-muro-logo {
 		
 		margin-top:3px;
 		text-align:center;
-		@include span-columns(2.5 of 4);
+		@include span-columns(2.05 of 4);
 		margin-left:4%;
 		img {
 			margin-left:auto;
 			margin-right:auto;
 			text-align:center;
 			height:34px;
+
 		}
 	}
 	#add-btn{
 		margin-top:3px;
-		@include span-columns(1);
+		font-size:1.2em;
+		margin:1em;
+
+		border-radius:1em;
+		
+
+		color:#424242;
+		
 		position:fixed;
 		margin-right:15px;
-		right:10px;
+		right:5px;
 		img {
 			height:40px;
 		}
+
 	}
 	.wall-history{
 		margin:0;
 		padding:0;
 		@include span-columns(12 of 12);
-		background-color:#424242;
-    overflow-x: scroll;
-    -webkit-overflow-scrolling: touch;
-    background-image: url("/images/background_line-01.png");
-    background-image: url("/images/background_line_opacity_8-01.png");
 
+		background-image:url("/images/background_timeline_drop.png");
 		background-repeat: repeat-y;
-    height:100%;
     @include media($mobile){ 
     	@include span-columns(4 of 4);
+    	background-color:white;
+	    overflow-x: hidden;
+	    -webkit-overflow-scrolling: touch;
+
+
+			background-repeat: repeat-y;
+	    height:90%;
   	}
+
     
 		li.graph-container{
 			margin:0;
-			overflow-y: scroll;
-			overflow-x: scroll;
+
+			
 			-webkit-overflow-scrolling: touch;
 			padding:0;
 			display:block;
 			list-style:none;
-    	overflow-y: scroll;
+			 overflow-x: hidden;
+		 .white-card{
+				background-color:white;
+				opacity:.95;
+				margin-top:0;
+
+				box-shadow: 3px 3px 15px #424242;
+				height:19em;
+				border-radius:2em;
+				margin-bottom:3em;
+				padding-bottom:3em;
+				
+
+			}
+    	
 			
 			@include media($mobile){
 				@include span-columns(4 of 4);
@@ -78,71 +114,122 @@
 				margin:0;
 
 				h2.artist-name{
-					margin: .5em 0 -.1em 0;
-					padding:0;
-					font-size:2.5em; 
+					font-size:1.5em; 
+					float:center;
 					display:block;
 					@include span-columns(4 of 4);
+					margin-bottom:0;
 					text-align:center;
 					float:center;
-					letter-spacing:1.5px;
+					background-color:white;
+					
+					margin-top:5em;
+					
+					color:#424242;
+					font-size:1.5em;
+					letter-spacing:.6em;
+					border-radius:1em;
 
+					
 				}
 				.photo-cred, .crew-name{
-					@include transform-style(preserve-3d);
-					color: #838383;
+					
+					color:#424242;
 					padding:0;
-					margin: 0 -.5em 0 0;
+					margin: 0 0 0 0;
 					display:block;
-					@include span-columns(2);
-					@include shift(2);
+					text-align:center;
 					font-size: .5em;
 					letter-spacing:3px;
-					text-align:right;
-					float:right;
+					
+					display:block;
+					@include span-columns(4 of 4);
+					background-color:white;
 					span {
-						color:white;
-						letter-spacing:1px;
+						color:#424242;
+						letter-spacing:.5em;
 					}
+					
+
+				}
+				.crew-name {
+					text-align:center;
+					margin-left:1.5em;
+					background-color:white;
 
 				}
 				.art-description{
 					display:block;
-					text-align:right;
+					text-align:center;
+					color:#424242;
 					@include span-columns(4 of 4);
+					margin-bottom:3em;
+					
+					
 				}
 
-				img {
 
-					padding:0;
-					marign:0;
-					margin-top:-1.6em;
+				img {
+					margin-top:0em;
+					margin-bottom:0em;
 					height:auto;
 					vertical-align:text-top;
 					display:inline-block;
-					width:90%;
-					float:right;
 					border:2px solid white;
+					border-radius:1em;
+					opacity:.8;
+					@include span-columns(2 of 4);
+					@include shift(1);
 				}
+				img:hover, img:active{
+					@include shift(0);
+					@include span-columns(4 of 4);
+					opacity:1;
+					border:1px solid white;
+					border-radius:.5em;
+				}
+				
 				p.time {
 					font-size:1em;
-					padding:0 0 .2em 0;
-					margin: -.5em -.2em -1.5em 0em;
-					transform:rotate(-90deg);
-					transform-origin: left top 0;
-					-webkit-transform: rotate(-90deg);
-					-moz-transform: rotate(-90deg);
-					-o-transform: rotate(-90deg);
-					-ms-transform: rotate(-90deg);
-					transform: rotate(-90deg);
-					display: inline-block;
-					color:white;
-					border-top: 7px solid white;
-					
-					border-radius:6px;
-					opacity:.9;
+					margin-left:auto;
+					margin-right:auto;
+					margin-top:3em;
+					@include span-columns(1 of 4);
+					@include shift(1.5);
+					display:block;
+					background-color:white;
+					border-radius:2em;
+					padding:.9em;
+					margin-bottom:3em;
+					text-align:center;
+					color:#424242;
+					box-shadow: 3px 3px 8px #424242;
+
+				
+				}
+				.branch {
+					background-color:white;
+					@include span-columns(1 of 4);
+					display:inline-block;
+					height:.3em;
+					margin-left:15px;
 				}
 			}
+		}
+
+		li.graph-container:nth-child(even){
+			
+			h2.artist-name{
+				
+			}
+			img {
+				
+			}
+			img:hover, img:active{	
+				@include shift(0);
+				
+			}
+
 		}
 	}
 margin-right:0;
@@ -160,3 +247,8 @@ margin-right:0;
 	height:100%;
 	display:none;
 } 
+#full-search {
+.wall-history{
+	background-image:none;
+	}
+}

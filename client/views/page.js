@@ -96,11 +96,21 @@ if (Meteor.isClient) {
       document.getElementById('logo-corner').style.display="none" 
       document.getElementById('main-nav').style.display="none"
     },
-    'touchstart .graf': function(event,template) {
-      // console.log(this)
-      // $(".graf").hide();
-      
-      // $(this).style.display="none" 
+    'change .graf': function(event,template) {
+      console.log("focused")
+
+
+    },
+    'touchstart #caratoes': function(event,template) {
+      event.preventDefault();
+      console.log("caratoes")
+      document.getElementById('artist-history').style.display="block"
+
+    },
+    'touchstart #hide-artist': function(event,template) {
+      console.log("caratoes bye bye")
+      document.getElementById('artist-history').style.display="none"
+
     }
 
   });

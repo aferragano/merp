@@ -20,6 +20,9 @@
 		margin-right:auto;
 		margin-top:6px;
 	}
+	#search-letters{
+		background-color:white;
+	}
 }
 #peek-search {
 	padding: .5em;
@@ -76,11 +79,20 @@
 		border-radius:.4em;
 		border:none;
 		vertical-align:text-bottom;
-
+		border: 2px solid #424242;
 	}
 	img{
 		@include span-columns(1);
 		vertical-align:text-top;
+	}
+	.find-btns{
+		height:3em;
+		vertical-align:text-top;
+		background:#424242;
+		border-radius:.4em;
+		margin:2px;
+		padding:.4em;
+		text-align: center;
 	}
 	#displayDate-name-field{
 		margin-top:10px;
@@ -122,7 +134,7 @@
 	}
 	img{
 		width:100%;
-		background-color:white;
+		background-color:black;
 		margin-bottom:.5em;
 	}
 	h2 {
