@@ -148,7 +148,7 @@ if (Meteor.isClient) {
           ],
 
         	 
-          center: new google.maps.LatLng(37.7833, -122.4167),
+          center: new google.maps.LatLng(37.76298, -122.42060),
           zoom: 14,
           zoomControlOptions: {
               style: google.maps.ZoomControlStyle.LARGE,
