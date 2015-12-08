@@ -32,11 +32,14 @@ button {
 	
 	@include media($mobile) {
 		img {
-
 		  @include span-columns(4);
 		  @include shift(0);
 		}
 	}
+	img {
+		  @include span-columns(4);
+		  @include shift(4);
+		}
 }
 
 #main-nav {
@@ -49,7 +52,7 @@ button {
 	position:absolute;
 	bottom:0;
 	z-index:12;
-	@include span-columns(12);
+	
 	#about-icon-btn, #map-icon-btn, #find-icon-btn{
 
 	}
@@ -65,6 +68,18 @@ button {
 			}
 		}
 	}
+	@include span-columns(4);
+	@include shift(4);
+	#about-icon-btn, #map-icon-btn, #find-icon-btn{
+			img {
+				margin-left:1.3em;
+				margin-right:1.3em;
+				@include span-columns(3);
+				vertical-align:text-top;
+
+			}
+		}
+
 
 }
 
